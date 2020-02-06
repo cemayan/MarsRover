@@ -8,9 +8,15 @@ public class PlateauService  implements IPlateauService {
 
     public void createPlateau(String gridSize) {
 
-        Integer x =  Integer.parseInt(gridSize.split(" ")[0]);
-        Integer y =  Integer.parseInt(gridSize.split(" ")[1]);
-        plateau = new Plateau(x, y);
+        try {
+            Integer x =  Integer.parseInt(gridSize.split(" ")[0]);
+            Integer y =  Integer.parseInt(gridSize.split(" ")[1]);
+
+            plateau = new Plateau(x, y);
+        }
+        catch (Exception e) {
+            plateau = new Plateau(0,0);
+        }
     }
 
     public Plateau getPlateau() {
