@@ -27,3 +27,9 @@ cd main/target
 java -jar main-1.0.jar
 
 ```
+
+---
+
+### Test Input
+
+![test_input.png](test_input.png)
